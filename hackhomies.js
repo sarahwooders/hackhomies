@@ -353,6 +353,15 @@ Template.fullProfileHelper.helpers({
                 prompt : 'Please enter your interests'
               }
             ]
+          },
+          about: {
+            identifier  : 'about',
+            rules: [
+              {
+                type   : 'maxLength[100]',
+                prompt : 'Please limit your life'
+              }
+            ]
           }
         }
       })
