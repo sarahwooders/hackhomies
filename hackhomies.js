@@ -253,7 +253,7 @@ Template.fullProfileHelper.helpers({
 
   Template.createProfile.events({
     'submit': function (event) {
-      event.preventDefault();
+
       var myProfile = {
         _id: Meteor.userId(),
         // id: Meteor.userId(),
@@ -282,7 +282,7 @@ Template.fullProfileHelper.helpers({
           {$set: {team: [], sentRequests: [], receivedRequests: []}}
           );
       }
-        
+      event.preventDefault();
       //this.$(".ui.fluid.dropdown").dropdown();
       Router.go('browse');
     }, 
