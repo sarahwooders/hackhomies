@@ -200,7 +200,10 @@ Template.fullProfile.helpers({
     if(this._id == Meteor.userId()) {
         return false;
     } else {
-      return score(Profiles.findOne({_id: Meteor.userId()}), Profiles.findOne(this._id)) >= 0;
+      if(Profiles.findOne({_id: Meteor.userId()})){
+        return score(Profiles.findOne({_id: Meteor.userId()}), Profiles.findOne(this._id)) >= 0;
+      }
+      
     }
     function score(p1, p2) { //add more to this!!!
       var skillMatch = 0;
@@ -250,6 +253,7 @@ Template.fullProfileHelper.helpers({
 
   Template.createProfile.events({
     'submit': function (event) {
+      event.preventDefault();
       var myProfile = {
         _id: Meteor.userId(),
         // id: Meteor.userId(),
@@ -280,7 +284,7 @@ Template.fullProfileHelper.helpers({
       }
         
       //this.$(".ui.fluid.dropdown").dropdown();
-       // Router.go('browse');
+      Router.go('browse');
     }, 
 
     
