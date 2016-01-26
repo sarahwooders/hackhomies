@@ -7,16 +7,19 @@
 		<p><i>See your hack-homies here. Remember, your homies can also approve other homies to be added to your team. Teams limited to 4 homies.</i></p>
 
 		<br>
-		{{> leaveTeam}}
-		{{else}}
+		
+		{{#if empty}}
 		<p>Looks like you got no homies :(</p>
+		{{else}}
+		{{> leaveTeam}}
+		{{/if}}
 		{{/if}}
 		<br>
 		<div style="text-align:center" class="ui three doubling stackable cards">
 			{{#each profiles}}
 			{{> fullProfile}}
 			{{/each}}
-		
+			
 		</div>
 	</div>
 	

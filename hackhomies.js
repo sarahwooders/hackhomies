@@ -77,7 +77,10 @@ if (Meteor.isClient) {
       }
     },
     myTeam: function (){
-      return (this.targetID == Meteor.userId() && Profiles.findOne({_id: this.targetID}).team.length > 0);
+      return (this.targetID == Meteor.userId());
+    },
+    empty: function (){
+      return (Profiles.findOne({_id: Meteor.userId()}).team.length == 0);
     }
   });
 
@@ -258,7 +261,7 @@ Template.fullProfileHelper.helpers({
         mySkills: $('.mySkills').dropdown('get value'),
         teamSkills: $('.teamSkills.dropdown').dropdown('get value'),
         interests: $('.interests.dropdown').dropdown('get value'),
-        about: event.target.about.value,
+        // about: event.target.about.value,
       }
 
       // Meteor.call('updateProfile', myProfile);
@@ -276,8 +279,8 @@ Template.fullProfileHelper.helpers({
           );
       }
         
-      
-      // Router.go('browse');
+      //this.$(".ui.fluid.dropdown").dropdown();
+       // Router.go('browse');
     }, 
 
     
@@ -292,6 +295,10 @@ Template.fullProfileHelper.helpers({
       }
     }
   });
+
+  // Template.createProfile.rendered = function(){
+  //   this.$(".ui.fluid.dropdown").dropdown();
+  // };
 
   Template.createProfile.onRendered(function(){
     this.$(".ui.fluid.dropdown").dropdown();
@@ -560,6 +567,9 @@ Template.fullProfileHelper.helpers({
     },
     actualProfile: function (){
       var actualID = this.__originalId;
+      if(actualID == Meteor.userId()){
+        return null;
+      }
       return Profiles.findOne({_id: actualID});
     }
   });
