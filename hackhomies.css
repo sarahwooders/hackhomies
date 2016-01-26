@@ -1,7 +1,4 @@
 body {
-  /*background-image: url("/supertransparentducks.png");*/
-  /*background-image:url("http://i649.photobucket.com/albums/uu213/jessie_wang1/grayduckstransparent_zpsdzikd9tr.png");*/
-  background-color: #c6ece5;
   background-image: url("http://i649.photobucket.com/albums/uu213/jessie_wang1/supertransparentducks_zpsqxkggxwg.png");
   background-attachment: fixed;
 
@@ -22,15 +19,6 @@ body {
   color: white;
 }
 
-
-/*#floatbox {
-  width: 100%;
-  height: 80%;
-  padding-left: 300px;
-  padding-top: 40px;
-  background-color: white;
- 
-}*/
 
 #bot{}
 
@@ -63,44 +51,3 @@ body {
   font-family: 'Moon Flower Bold';
   src: url('/Moon_Flower_Bold.ttf') format("truetype");
 }
-
-/*.shadowbox{
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-}*/
-/*
-
-.container {
-  text-align: center;
-  float: center;
-  padding-right: 20px;
-  width: 100%
-  margin: 0 auto;
-  min-height: 100%;
-}
-
-header {
-  background: #ff6666;
-  text-align: right;
-  padding: 15px 10px 10px 10px;
-  position: relative;
-}
-
-
-h1 {
-  font-family: "Lato";
-  color: white;
-  font-size: 20pt;
-  margin: 0;
-  margin-bottom: 5px;
-  display: inline-block;
-  margin-right: 1em;
-}
-
-h2 {
-  font-family: "Lato";
-  color:gray;
-  font-size:14pt;
-}
-
-*/
-

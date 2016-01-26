@@ -13,14 +13,21 @@
     {{> DynamicTemplate template=button}}
     <br>
   </div>
-  
+
   {{else}}
   <div class="ui card">
 
     {{> fullProfileHelper}}
+
+    <div class="extra content">
+      <span>
+        <img src="/recommendedempty.png" style="width:207.02px; height:49.5px; padding-left:10px;">
+      </span>
+    </div>
     
     {{> DynamicTemplate template=button}}
     <br>
+
   </div>
   {{/if}}
 </template>
